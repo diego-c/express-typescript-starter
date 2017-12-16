@@ -4,8 +4,8 @@
   "description": "A minimal boilerplate for express projects written in typescript",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./src/server.js",
-    "compile": "tsc -w ./src/routes/routes.ts ./src/server.ts -t es2015 -m commonjs"
+    "start": "nodemon ./src/build/server.js",
+    "compile": "tsc @compile.txt"
   },
   "keywords": [
     "nodejs",

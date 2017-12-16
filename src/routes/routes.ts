@@ -9,19 +9,17 @@ type Data = {
     inDev: boolean
 }
 
-router.get('/', (req: Request, res: Response, next: NextFunction) => {
+router.get('/', (req: Request, res: Response) => {
     let data: Data = {
         project: 'myProject',
         inDev: true
     }
     res.render('index', data);
-    next();
 });
 
 // 404
-router.all('*', (req: Request, res: Response, next: NextFunction) => {
+router.all('*', (req: Request, res: Response) => {
     res.render('404');
-    next();
 })
 
 // ship routes

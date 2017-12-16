@@ -1,0 +1,6 @@
+-w
+-m commonjs
+-t es2015
+./src/routes/routes.ts --outDir ./src/build/routes
+
+./src/server.ts --outDir ./src/build/
