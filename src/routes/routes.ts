@@ -1,5 +1,4 @@
 import { Request, Response, Router } from 'express';
-import { NextFunction } from 'express-serve-static-core';
 const router: Router = Router();
 
 // GET / with sample data
