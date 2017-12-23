@@ -1,20 +1,18 @@
-import * as express from 'express';
-import { join } from 'path';
-import routes from './routes/routes';
-const app: express.Application = express(),
+import * as modules from './exports/exports';
+const app: modules.express.Application = modules.express(),
 port = process.env.PORT || 4000;
 
 // view engine
 app.set('view engine', 'ejs');
 
 // views folder
-app.set('views', join(__dirname, 'views'));
+app.set('views', modules.join(__dirname, 'views'));
 
 // assets folder
-app.use(express.static(join(__dirname, 'public')));
+app.use(modules.express.static(modules.join(__dirname, 'public')));
 
 // routes
-app.use(routes);
+app.use(modules.routes);
 
 // listen for requests
 app.listen(port, () => console.log(`Serving your application on port ${port}`));
